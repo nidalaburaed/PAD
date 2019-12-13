@@ -1,0 +1,30 @@
+{
+  "config": {
+    "docker_repo": "metric-based-anomaly-detection",
+    "docker_tag": "0.1.3",
+    "no_proxy": "localhost,127.0.0.1,instance-data,169.254.169.254,.nsn-net.net,.nsn-rdnet.net,.ext.net.nokia.com,.int.net.nokia.com,.inside.nsn.com,.inside.nokiasiemensnetworks.com,archive.docker-registry.eecloud.nsn-net.net,ava-docker-local.esisoj70.emea.nsn-net.net"
+  },
+  "repos": {
+    "raw": "https://artifactory-espoo1.int.net.nokia.com/artifactory/ava-raw-local/"
+  },
+  "build": {
+    "build-args": {
+      "REPO_HOST": "artifactory-espoo1.int.net.nokia.com",
+      "PKG_REPO": "https://artifactory-espoo1.int.net.nokia.com/artifactory/ava-raw-local",
+      "PYPI_REPO": "https://artifactory-espoo1.int.net.nokia.com/artifactory/api/pypi/python-remote/simple/",
+      "MVN_REPO": "https://artifactory-espoo1.int.net.nokia.com/artifactory/public-maven-remotes"
+
+    }
+  },
+  "cache": {
+    "ports": [],
+    "envs": {},
+    "cmd": "/bin/bash"
+  },
+  "commit": {
+    "envs": {},
+    "entrypoint": "/app.py"
+  }
+}
+
+
